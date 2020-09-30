@@ -21,4 +21,6 @@ int main() {
 		
 	}
 
+	printf("\nBye ;)");
+
 }
