@@ -47,12 +47,7 @@ int main() {
 		else { tableauNote[compteur] = note; };
 		compteur++;
 	} while (compteur < NBMAXNOTE);
-	// Compte le nombre de valide
-	/**if (verif != 0) {
-		nbNoteValide = verif - nbAbsent;
-	} else {
-		nbNoteValide = NBMAXNOTE - nbAbsent;
-	};**/
+	
 	// Clacul de la moyenne
 	for (int j = 0; j < NBMAXNOTE; j++) {
 		if (tableauNote[j] == -2) {
