@@ -25,11 +25,11 @@ int main() {
 			{
 			case 'A':
 				nbAbsent++;
-				tableauNote[compteur - 1] = -1;
+				tableauNote[compteur] = -1;
 				break;
 			case 'O':
 				// Verif permet ensuite de compter le nombre de notre entree par la suite
-				verif = compteur;
+				//verif = compteur;
 				compteur = NBMAXNOTE;
 				
 				break;
@@ -48,23 +48,21 @@ int main() {
 		compteur++;
 	} while (compteur < NBMAXNOTE);
 	// Compte le nombre de valide
-	/*if (verif != 0) {
+	/**if (verif != 0) {
 		nbNoteValide = verif - nbAbsent;
 	} else {
 		nbNoteValide = NBMAXNOTE - nbAbsent;
-	};*/
+	};**/
 	// Clacul de la moyenne
-	for (int i = 0; i < NBMAXNOTE; i++) {
-		if (tableauNote[i] == -2) {
+	for (int j = 0; j < NBMAXNOTE; j++) {
+		if (tableauNote[j] == -2) {
 			break;
 		}
-		if (tableauNote[i] != -1) {
-			moyenne += tableauNote[i];
+		if (tableauNote[j] != -1) {
+			moyenne += tableauNote[j];
 		}; 
 		nbNoteValide++;
-
 	};
-	printf("%d", nbNoteValide);
 	nbNoteValide -= nbAbsent;
 	moyenne = moyenne / nbNoteValide;
 	printf("\nIl y a %d notes. La note moyenne est de %f. Il y a %d absent(s)\n",nbNoteValide, moyenne, nbAbsent);
